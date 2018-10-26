@@ -43,6 +43,7 @@ jobs:
       before_deploy:
         - cp manifest-allocations.yml manifest.yml
         - echo "Deploying allocations server $RELEASE_TAG"
+        - echo "$RELEASE_TAG"
       deploy: &cloudfoundry
         provider: cloudfoundry
         api: $CF_API_URL
